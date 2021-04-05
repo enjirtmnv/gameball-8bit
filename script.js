@@ -353,17 +353,14 @@ function handlerClick(game) {
         toggleTimer();
     });
 
-    stopButton.addEventListener('click', () => {
+    const stopGame = function() {
         game.stop();
         resetTimer();
         clearInterval(needleCenterInterval);
-    });
+    };
 
-    reloadButton.addEventListener('click', () => {
-        game.stop();
-        resetTimer();
-        clearInterval(needleCenterInterval);
-    });
+    stopButton.addEventListener('click', stopGame);
+    reloadButton.addEventListener('click', stopGame);
 }
 
 
