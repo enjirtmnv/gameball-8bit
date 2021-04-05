@@ -288,8 +288,8 @@ class Game {
             ctx.font = "33px Helvetica";
             ctx.fillStyle = "white";
             ctx.textAlign = "center";
-            ctx.fillText(`Score: ${this.done}`, this.gameWidth / 2, this.gameHeight / 2 - 35);
-            ctx.fillText(`Lose: ${this.lose}`, this.gameWidth / 2, this.gameHeight / 2 + 35);
+            ctx.fillText(`Score: ${this.done}`, this.gameWidth / 2, this.gameHeight / 2 - 25);
+            ctx.fillText(`Lose: ${this.lose}`, this.gameWidth / 2, this.gameHeight / 2 + 25);
         }
     }
 
