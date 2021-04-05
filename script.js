@@ -78,11 +78,11 @@ const randColor = function () {
     return "rgb(" + red + "," + green + "," + blue + ")";
 };
 
-let randomRadius = 20;
+let randomRadius = 25;
 const calcRandomRadius = function () {
-    randomRadius = Math.floor(Math.random() * 30);
-    if (randomRadius < 10) {
-        randomRadius = 10;
+    randomRadius = Math.floor(Math.random() * 35);
+    if (randomRadius < 15) {
+        randomRadius = 15;
     }
     return randomRadius
 };
@@ -127,7 +127,7 @@ class Balloon {
         ) {
             this.dx = 0;
             this.dy = 0;
-            this.y = 7;
+            this.y = 10;
             this.doneScore = 'done';
             this.markedForRemove = true;
         }
@@ -193,8 +193,8 @@ class Needle {
         ctx.beginPath();
         ctx.fillStyle = '#ffffff';
         ctx.moveTo(this.position.x, this.height);
-        ctx.lineTo(this.position.x + 30, this.position.y);
-        ctx.lineTo(this.position.x - 30, this.position.y);
+        ctx.lineTo(this.position.x + 3, this.position.y);
+        ctx.lineTo(this.position.x - 3, this.position.y);
         ctx.fill();
     }
 }
