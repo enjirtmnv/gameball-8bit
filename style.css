@@ -52,18 +52,16 @@ body {
     padding: 40px 0;
 }
 
-
 .app__header {
-    display: flex;
-    justify-content: center;
     width: 100%;
 }
 
 .app__header-name{
     display: flex;
+    text-align: center;
     justify-content: center;
     font-family: 'Press Start 2P', cursive;
-    font-size: 90px;
+    font-size: 80px;
     width: 100%;
     color: #ffe000;
     text-shadow: #ea0000 1.5px 1px 0.5px;
