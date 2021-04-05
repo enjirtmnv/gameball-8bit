@@ -61,7 +61,7 @@ body {
     justify-content: center;
     text-align: center;
     font-family: 'Press Start 2P', cursive;
-    font-size: 90px;
+    font-size: 5.6rem;
     width: 100%;
     color: #ffe000;
     text-shadow: #ea0000 1.5px 1px 0.5px;
@@ -116,7 +116,7 @@ body {
 }
 
 .app__start-btn{
-    font-size: 65px;
+    font-size: 4rem;
     color: #ffffff;
     text-shadow: #000000 1.5px 1px 0.5px;
 }
