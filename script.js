@@ -78,9 +78,9 @@ const randColor = function () {
     return "rgb(" + red + "," + green + "," + blue + ")";
 };
 
-let randomRadius = 25;
+let randomRadius = 20;
 const calcRandomRadius = function () {
-    randomRadius = Math.floor(Math.random() * 35);
+    randomRadius = Math.floor(Math.random() * 45);
     if (randomRadius < 15) {
         randomRadius = 15;
     }
@@ -122,7 +122,7 @@ class Balloon {
 
         if (this.x + this.radius >= this.needle.position.x
             && this.x <= this.needle.position.x + this.needle.width
-            && this.y + this.radius <= this.needle.height * 1.7
+            && this.y + this.radius <= this.needle.height * 2.5
             && this.markedForRemove !== true
         ) {
             this.dx = 0;
@@ -160,8 +160,8 @@ function createBalloons(gameHeight, gameWidth, gameTime, needle) {
             const y = gameHeight + radius / 2;
             const angle = Math.atan2(gameHeight / 2 - y, gameWidth / 2 - x);
             const color = randColor();
-            const dx = Math.cos(angle) * 10;
-            const dy = Math.sin(angle) * 5;
+            const dx = Math.cos(angle) * 6;
+            const dy = Math.sin(angle) * 3;
 
             balloons.push(new Balloon(x, y, radius, color, dx, dy, gameWidth, gameHeight, needle));
             changeTimer();
@@ -181,8 +181,8 @@ function createBalloons(gameHeight, gameWidth, gameTime, needle) {
 class Needle {
     constructor(game) {
         this.gameWidth = game.gameWidth;
-        this.width = 6;
-        this.height = 22;
+        this.width = 10;
+        this.height = 40;
         this.position = {
             x: game.gameWidth / 2 - this.width / 2,
             y: 0
@@ -193,8 +193,8 @@ class Needle {
         ctx.beginPath();
         ctx.fillStyle = '#ffffff';
         ctx.moveTo(this.position.x, this.height);
-        ctx.lineTo(this.position.x + 3, this.position.y);
-        ctx.lineTo(this.position.x - 3, this.position.y);
+        ctx.lineTo(this.position.x + 5, this.position.y);
+        ctx.lineTo(this.position.x - 5, this.position.y);
         ctx.fill();
     }
 }
@@ -288,8 +288,8 @@ class Game {
             ctx.font = "33px Helvetica";
             ctx.fillStyle = "white";
             ctx.textAlign = "center";
-            ctx.fillText(`Score: ${this.done}`, this.gameWidth / 2, this.gameHeight / 2 - 25);
-            ctx.fillText(`Lose: ${this.lose}`, this.gameWidth / 2, this.gameHeight / 2 + 25);
+            ctx.fillText(`Score: ${this.done}`, this.gameWidth / 2, this.gameHeight / 2 - 35);
+            ctx.fillText(`Lose: ${this.lose}`, this.gameWidth / 2, this.gameHeight / 2 + 35);
         }
     }
 
