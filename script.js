@@ -78,11 +78,11 @@ const randColor = function () {
     return "rgb(" + red + "," + green + "," + blue + ")";
 };
 
-let randomRadius = 40;
+let randomRadius = 30;
 const calcRandomRadius = function () {
-    randomRadius = Math.floor(Math.random() * 60);
-    if (randomRadius < 20) {
-        randomRadius = 20;
+    randomRadius = Math.floor(Math.random() * 40);
+    if (randomRadius < 14) {
+        randomRadius = 14;
     }
     return randomRadius
 };
@@ -122,12 +122,12 @@ class Balloon {
 
         if (this.x + this.radius >= this.needle.position.x
             && this.x <= this.needle.position.x + this.needle.width
-            && this.y + this.radius <= this.needle.height * 2.5
+            && this.y + this.radius <= this.needle.height * 1.7
             && this.markedForRemove !== true
         ) {
             this.dx = 0;
             this.dy = 0;
-            this.y = 10;
+            this.y = 7;
             this.doneScore = 'done';
             this.markedForRemove = true;
         }
@@ -181,8 +181,8 @@ function createBalloons(gameHeight, gameWidth, gameTime, needle) {
 class Needle {
     constructor(game) {
         this.gameWidth = game.gameWidth;
-        this.width = 10;
-        this.height = 40;
+        this.width = 7;
+        this.height = 27;
         this.position = {
             x: game.gameWidth / 2 - this.width / 2,
             y: 0
@@ -193,8 +193,8 @@ class Needle {
         ctx.beginPath();
         ctx.fillStyle = '#ffffff';
         ctx.moveTo(this.position.x, this.height);
-        ctx.lineTo(this.position.x + 5, this.position.y);
-        ctx.lineTo(this.position.x - 5, this.position.y);
+        ctx.lineTo(this.position.x + 3.5, this.position.y);
+        ctx.lineTo(this.position.x - 3.5, this.position.y);
         ctx.fill();
     }
 }
