@@ -263,17 +263,6 @@ class Game {
             gameWrap.style.display = 'none';
             stopPauseBtnWrap.style.display = 'none';
             startBtnWrap.style.display = 'flex';
-
-            ctx.rect(0, 0, this.gameWidth, this.gameHeight);
-            ctx.fillStyle = "rgb(255,255,255)";
-            ctx.fill();
-
-            ctx.font = "20px Helvetica";
-            ctx.fillStyle = "white";
-            ctx.textAlign = "center";
-            ctx.fillText("Сlick on start", this.gameWidth / 2, this.gameHeight / 2);
-
-
         }
 
         if (gameState === GAMESTATE_STORE.TIMEOVER) {
@@ -328,10 +317,24 @@ class Game {
 }
 
 
+
 function handlerClick(game) {
-    stopButton.addEventListener('click', () => {
-        game.stop();
-        resetTimer();
+
+    let needleCentering;
+    let needleCenterInterval;
+
+    function calcNeedleCentering() {
+        return needleCentering = (document.documentElement.clientWidth - canvas.width) / 2;
+    }
+
+    document.addEventListener('mousemove', (e) => {
+        game.needle.position.x = e.pageX - needleCentering;
+    });
+
+    startButton.addEventListener('click', () => {
+        game.start();
+        startTimer();
+        needleCenterInterval = setInterval(calcNeedleCentering, 100);
     });
 
     let pauseButtonState = false;
@@ -349,15 +352,11 @@ function handlerClick(game) {
         toggleTimer();
     });
 
-    const needleCenteringAxisX = (document.documentElement.clientWidth - canvas.width) / 2;
 
-    document.addEventListener('mousemove', (e) => {
-        game.needle.position.x = e.pageX - needleCenteringAxisX;
-    });
-
-    startButton.addEventListener('click', () => {
-        game.start();
-        startTimer();
+    stopButton.addEventListener('click', () => {
+        game.stop();
+        resetTimer();
+        clearInterval(needleCenterInterval);
     });
 }
 
