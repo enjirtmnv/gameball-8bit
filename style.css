@@ -94,16 +94,16 @@ body {
     display: none;
     justify-content: space-evenly;
     margin: 30px 0 0 0;
-    width: 1000px;
+    width: 700px;
 }
 
-.app__stop-btn, .app__pause-btn {
+.app__stop-btn, .app__pause-btn, .app__reload-btn {
     font-size: 37px;
     color: #ffe000;
     text-shadow: #ea0000 1.5px 1px 0.5px;
 }
 
-.app__stop-btn:hover, .app__pause-btn:hover{
+.app__stop-btn:hover, .app__pause-btn:hover, .app__reload-btn:hover{
     text-shadow: #ea0000 3.5px 3px 0.5px;
 }
 
@@ -123,6 +123,13 @@ body {
 
 .app__start-btn:hover{
     text-shadow: #000000 3.5px 3px 0.5px;
+}
+
+.app__reload-btn-wrap{
+    display: none;
+    justify-content: center;
+    margin: 30px 0 0 0;
+    width: 700px;
 }
 
 .button {
