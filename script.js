@@ -242,8 +242,8 @@ class Game {
 
             ctx.font = '20px Helvetica';
             ctx.fillStyle = '#ff1500';
-            ctx.fillText("Score: " + this.done, 110, this.gameHeight - 50);
-            ctx.fillText("Lose: " + this.lose, this.gameWidth - 110, this.gameHeight - 50);
+            ctx.fillText("Score: " + this.done, 90, this.gameHeight - 45);
+            ctx.fillText("Lose: " + this.lose, this.gameWidth - 90, this.gameHeight - 45);
         }
 
 
@@ -288,8 +288,8 @@ class Game {
             ctx.font = "33px Helvetica";
             ctx.fillStyle = "white";
             ctx.textAlign = "center";
-            ctx.fillText(`Score: ${this.done}`, this.gameWidth / 2, this.gameHeight / 2 - 25);
-            ctx.fillText(`Lose: ${this.lose}`, this.gameWidth / 2, this.gameHeight / 2 + 25);
+            ctx.fillText(`Score: ${this.done}`, this.gameWidth / 2, this.gameHeight / 2 - 35);
+            ctx.fillText(`Lose: ${this.lose}`, this.gameWidth / 2, this.gameHeight / 2 + 35);
         }
     }
 
