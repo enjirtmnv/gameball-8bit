@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P|Share+Tech+Mono&display=swap');
+
+body {
+    background: #ffbeef;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-size: 100%;
+    font-family: 'Share Tech Mono', monospace;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    background: linear-gradient(#4fc5ff, #e9f5ff);
+}
+
+#canvas {
+    background: transparent;
+    border: 10px solid #ffffff;
+}
+
+.app__wrap{
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 40px 0;
+}
+
+
+.app__header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.app__header-name{
+    display: flex;
+    justify-content: center;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 90px;
+    width: 100%;
+    color: #ffe000;
+    text-shadow: #ea0000 1.5px 1px 0.5px;
+}
+
+.app__game{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.app__time-wrap{
+    margin: 60px 0 30px 0;
+}
+
+.app__time-wrap {
+    font-size: 21px;
+}
+
+.game-time{
+    font-size: 27px;
+    margin: 0 10px;
+}
+
+.app__time-wrap, .game-time {
+    font-family: 'Press Start 2P', cursive;
+}
+
+.app__stop-pause-btn-wrap{
+    display: none;
+    justify-content: space-evenly;
+    margin: 30px 0 0 0;
+    width: 1000px;
+}
+
+.app__stop-btn, .app__pause-btn {
+    font-size: 55px;
+    color: #ffe000;
+    text-shadow: #ea0000 1.5px 1px 0.5px;
+}
+
+.app__stop-btn:hover, .app__pause-btn:hover{
+    text-shadow: #ea0000 3.5px 3px 0.5px;
+}
+
+.app__start-btn-wrap{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app__start-btn{
+    font-size: 65px;
+    color: #ffffff;
+    text-shadow: #000000 1.5px 1px 0.5px;
+}
+
+.app__start-btn:hover{
+    text-shadow: #000000 3.5px 3px 0.5px;
+}
+
+.button {
+    background:none;
+    border:none;
+    margin:0;
+    padding:0;
+    cursor: pointer;
+    vertical-align: middle;
+    text-align: center;
+    align-content: flex-end;
+    font-family: 'Press Start 2P', cursive;
+    letter-spacing: -0.5px;
+}
+
