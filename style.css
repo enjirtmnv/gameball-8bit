@@ -30,7 +30,7 @@ body {
 }
 
 body {
-    font-size: 62.5%;
+    font-size: 100%;
     font-family: 'Share Tech Mono', monospace;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
@@ -61,7 +61,7 @@ body {
     justify-content: center;
     text-align: center;
     font-family: 'Press Start 2P', cursive;
-    font-size: 5.6rem;
+    font-size: 60px;
     width: 100%;
     color: #ffe000;
     text-shadow: #ea0000 1.5px 1px 0.5px;
@@ -78,11 +78,11 @@ body {
 }
 
 .app__time-wrap {
-    font-size: 21px;
+    font-size: 14px;
 }
 
 .game-time{
-    font-size: 27px;
+    font-size: 18px;
     margin: 0 10px;
 }
 
@@ -98,7 +98,7 @@ body {
 }
 
 .app__stop-btn, .app__pause-btn {
-    font-size: 55px;
+    font-size: 37px;
     color: #ffe000;
     text-shadow: #ea0000 1.5px 1px 0.5px;
 }
@@ -116,7 +116,7 @@ body {
 }
 
 .app__start-btn{
-    font-size: 4rem;
+    font-size: 43px;
     color: #ffffff;
     text-shadow: #000000 1.5px 1px 0.5px;
 }

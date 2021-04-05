@@ -25,8 +25,8 @@ let intervalStart;
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
-canvas.height = 700;
-canvas.width = 1000;
+canvas.height = 500;
+canvas.width = 700;
 time.textContent = startTime;
 
 
@@ -240,7 +240,7 @@ class Game {
 
             [...this.needleArray].forEach(element => element.draw(ctx));
 
-            ctx.font = '30px Helvetica';
+            ctx.font = '20px Helvetica';
             ctx.fillStyle = '#ff1500';
             ctx.fillText("Score: " + this.done, 110, this.gameHeight - 50);
             ctx.fillText("Lose: " + this.lose, this.gameWidth - 110, this.gameHeight - 50);
@@ -252,7 +252,7 @@ class Game {
             ctx.fillStyle = "rgba(255,255,255,0.5)";
             ctx.fill();
 
-            ctx.font = "45px Helvetica";
+            ctx.font = "30px Helvetica";
             ctx.fillStyle = "#3e3e3e";
             ctx.textAlign = "center";
             ctx.fillText("Paused", this.gameWidth / 2, this.gameHeight / 2);
@@ -268,7 +268,7 @@ class Game {
             ctx.fillStyle = "rgb(255,255,255)";
             ctx.fill();
 
-            ctx.font = "30px Helvetica";
+            ctx.font = "20px Helvetica";
             ctx.fillStyle = "white";
             ctx.textAlign = "center";
             ctx.fillText("Сlick on start", this.gameWidth / 2, this.gameHeight / 2);
@@ -285,7 +285,7 @@ class Game {
             ctx.fillStyle = "rgba(0,0,0,1)";
             ctx.fill();
 
-            ctx.font = "50px Helvetica";
+            ctx.font = "33px Helvetica";
             ctx.fillStyle = "white";
             ctx.textAlign = "center";
             ctx.fillText(`Score: ${this.done}`, this.gameWidth / 2, this.gameHeight / 2 - 35);
