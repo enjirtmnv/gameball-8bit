@@ -30,7 +30,7 @@ body {
 }
 
 body {
-    font-size: 100%;
+    font-size: 62.5%;
     font-family: 'Share Tech Mono', monospace;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
@@ -58,10 +58,10 @@ body {
 
 .app__header-name{
     display: flex;
-    text-align: center;
     justify-content: center;
+    text-align: center;
     font-family: 'Press Start 2P', cursive;
-    font-size: 80px;
+    font-size: 90px;
     width: 100%;
     color: #ffe000;
     text-shadow: #ea0000 1.5px 1px 0.5px;
