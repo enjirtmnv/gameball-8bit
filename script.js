@@ -17,7 +17,7 @@ const GAMESTATE_STORE = {HOMEPAGE, RUNNING, PAUSED, TIMEOVER};
 
 let gameState = GAMESTATE_STORE.HOMEPAGE;
 
-let startTime = 60;
+let startTime = 2;
 let currentTime = startTime;
 let statusTimer = false;
 let intervalStart;
@@ -234,7 +234,6 @@ class Game {
             gameWrap.style.display = 'flex';
             stopPauseBtnWrap.style.display = 'flex';
             stopButton.style.display = 'flex';
-            stopButton.innerHTML = 'Stop';
             pauseButton.style.display = 'flex';
             startBtnWrap.style.display = 'none';
 
@@ -267,8 +266,6 @@ class Game {
 
         if (gameState === GAMESTATE_STORE.TIMEOVER) {
             pauseButton.style.display = 'none';
-            stopButton.innerHTML = 'Reload';
-
 
             ctx.rect(0, 0, this.gameWidth, this.gameHeight);
             ctx.fillStyle = "rgba(0,0,0,1)";
@@ -286,6 +283,7 @@ class Game {
     update() {
         if (time.innerHTML === '0') {
             this.filterBalloons.length = 0;
+            stopButton.innerHTML = 'Reload';
             gameState = GAMESTATE_STORE.TIMEOVER;
         }
 
@@ -294,6 +292,7 @@ class Game {
         }
 
         if (gameState === GAMESTATE_STORE.RUNNING) {
+            stopButton.innerHTML = 'Stop';
             this.balloons.forEach(item => item.update());
 
             let balloon = this.balloons.filter(balloon => !balloon.markedForRemove);
@@ -352,8 +351,8 @@ function handlerClick(game) {
         toggleTimer();
     });
 
-
     stopButton.addEventListener('click', () => {
+        console.log('POH');
         game.stop();
         resetTimer();
         clearInterval(needleCenterInterval);
