@@ -265,6 +265,16 @@ class Game {
             stopPauseBtnWrap.style.display = 'none';
             reloadBtnWrap.style.display = 'none';
             startBtnWrap.style.display = 'flex';
+
+            ctx.rect(0, 0, this.gameWidth, this.gameHeight);
+            ctx.fillStyle = "rgba(0,0,0,1)";
+            ctx.fill();
+
+            ctx.font = "30px Arial";
+            ctx.fillStyle = "white";
+            ctx.textAlign = "center";
+            ctx.fillText("Press START", this.gameWidth / 2, this.gameHeight / 2
+            );
         }
 
         if (gameState === GAMESTATE_STORE.TIMEOVER) {
