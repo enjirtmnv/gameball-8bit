@@ -78,11 +78,11 @@ const randColor = function () {
     return "rgb(" + red + "," + green + "," + blue + ")";
 };
 
-let randomRadius = 30;
+let randomRadius = 20;
 const calcRandomRadius = function () {
-    randomRadius = Math.floor(Math.random() * 40);
-    if (randomRadius < 14) {
-        randomRadius = 14;
+    randomRadius = Math.floor(Math.random() * 30);
+    if (randomRadius < 10) {
+        randomRadius = 10;
     }
     return randomRadius
 };
@@ -181,8 +181,8 @@ function createBalloons(gameHeight, gameWidth, gameTime, needle) {
 class Needle {
     constructor(game) {
         this.gameWidth = game.gameWidth;
-        this.width = 7;
-        this.height = 27;
+        this.width = 6;
+        this.height = 22;
         this.position = {
             x: game.gameWidth / 2 - this.width / 2,
             y: 0
@@ -193,8 +193,8 @@ class Needle {
         ctx.beginPath();
         ctx.fillStyle = '#ffffff';
         ctx.moveTo(this.position.x, this.height);
-        ctx.lineTo(this.position.x + 3.5, this.position.y);
-        ctx.lineTo(this.position.x - 3.5, this.position.y);
+        ctx.lineTo(this.position.x + 30, this.position.y);
+        ctx.lineTo(this.position.x - 30, this.position.y);
         ctx.fill();
     }
 }
@@ -288,8 +288,8 @@ class Game {
             ctx.font = "33px Helvetica";
             ctx.fillStyle = "white";
             ctx.textAlign = "center";
-            ctx.fillText(`Score: ${this.done}`, this.gameWidth / 2, this.gameHeight / 2 - 35);
-            ctx.fillText(`Lose: ${this.lose}`, this.gameWidth / 2, this.gameHeight / 2 + 35);
+            ctx.fillText(`Score: ${this.done}`, this.gameWidth / 2, this.gameHeight / 2 - 25);
+            ctx.fillText(`Lose: ${this.lose}`, this.gameWidth / 2, this.gameHeight / 2 + 25);
         }
     }
 
