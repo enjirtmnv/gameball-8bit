@@ -19,7 +19,7 @@ const GAMESTATE_STORE = {HOMEPAGE, RUNNING, PAUSED, TIMEOVER};
 
 let gameState = GAMESTATE_STORE.HOMEPAGE;
 
-let startTime = 2;
+let startTime = 60;
 let currentTime = startTime;
 let statusTimer = false;
 let intervalStart;
